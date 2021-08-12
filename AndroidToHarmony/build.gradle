@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\haoxi\\OneDrive\\桌面\\AndroidForHarmony.p12')
+            storePassword '00000019925A69C9704367814D1BD32D7C1F95F221CE3C9665A0486EE0ABEAC1FF23D337F6BA612A59'
+            keyAlias = 'agree'
+            keyPassword '000000193EA4447CA8D7A447A7C1C4F4B4F17274D2776E41F7A0F5291184627B2489259B68E96FC7FF'
+            signAlg = 'SHA256withECDSA'
+            profile file('C:\\Users\\haoxi\\OneDrive\\桌面\\AndroidForHarmony_Debug.p7b')
+            certpath file('C:\\Users\\haoxi\\OneDrive\\桌面\\AndroidForHarmony.cer')
+        }
+        release {
+            storeFile file('C:\\Users\\haoxi\\OneDrive\\桌面\\AndroidForHarmony.p12')
+            storePassword '000000194D1C457224AAD270B4E373BCA7B0392471D888230A62694B59A42269152809DA8B7B4AA82C'
+            keyAlias = 'agree'
+            keyPassword '00000019B4BD74C6E480B2A74647B4963E5C05A50241FB21FC8F3D1BF58321374D698B926F6DF0DBDD'
+            signAlg = 'SHA256withECDSA'
+            profile file('C:\\Users\\haoxi\\OneDrive\\桌面\\AndroidForHarmony_Debug.p7b')
+            certpath file('C:\\Users\\haoxi\\OneDrive\\桌面\\AndroidForHarmony.cer')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 5
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:2.4.5.0'
+        classpath 'com.huawei.ohos:decctest:1.2.4.1'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+}

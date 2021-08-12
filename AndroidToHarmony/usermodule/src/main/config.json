@@ -1,0 +1,37 @@
+{
+  "app": {
+    "bundleName": "cn.hxw.android.harmony",
+    "vendor": "hxw",
+    "version": {
+      "code": 1,
+      "name": "1.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "cn.hxw.android.user",
+    "name": ".MyApplication",
+    "mainAbility": "cn.hxw.android.user.UserMainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "usermodule",
+      "moduleType": "feature",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "orientation": "unspecified",
+        "visible": true,
+        "name": "cn.hxw.android.user.UserMainAbility",
+        "icon": "$media:icon",
+        "description": "$string:usermainability_description",
+        "label": "$string:usermodule_UserMainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}
